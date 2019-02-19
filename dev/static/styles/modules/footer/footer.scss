@@ -1,0 +1,183 @@
+@import "signup";
+
+footer {
+  flex: 0 0 auto;
+  padding: 65px 0;
+  @media screen and (max-width: $tablet-size){
+    padding: 35px 0;
+  }
+  .container{
+    display: flex;
+    border-bottom: 1px solid rgba(68, 68, 68, .5);
+    & > * {
+    	&:not(:last-child){
+    		margin-right: 60px;
+        @media screen and (max-width: $tablet-size){
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+    	}
+    }
+    @media screen and (max-width: $tablet-size){
+      flex-direction: column;
+    }
+  }
+}
+
+.footer{
+
+  &__logo{
+    margin-bottom: 30px;
+    @media screen and (max-width: $tablet-size){
+      margin-bottom: 0;
+      margin-right: 20px ;
+    }
+    @media screen and (max-width: $phone-size){
+      margin-right: 0 ;
+      margin-bottom: 15px;
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  &__text{
+    @media screen and (max-width: $phone-size){
+      width: 100%;
+    }
+  }
+  &__block{
+    &:first-child{
+      width: 260px ;
+      @media screen and (max-width: $tablet-size){
+        width: 100%;
+        display: flex;
+      }
+      @media screen and (max-width: $phone-size){
+        width: 100%;
+        display: block;
+      }
+
+    }
+  }
+  &__row{
+    display: flex;
+    margin-bottom: 85px;
+    @media screen and (max-width: $tablet-size){
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: $phone-size){
+      padding: 2%;
+      flex-wrap: wrap;
+      & > * {
+        width: 50%;
+        margin-bottom: 25px;
+      	&:first-child {margin-top: 0 ;}
+      	&:last-child {
+          width: 100%;
+          margin-bottom: 0 ;
+          margin-left: 20%;
+        }
+      }
+    }
+    & > * {
+
+    	&:not(:last-child){
+        flex: 1;
+    	}
+    }
+  }
+  &__title{
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    @media screen and (max-width: $phone-size){
+      margin-bottom: 15px;
+    }
+  }
+  &-nav__list{
+
+    & > * {
+    	margin: 22px 0;
+    	&:first-child {margin-top: 0 ;}
+    	&:last-child {margin-bottom: 0 ;}
+      @media screen and (max-width: $phone-size){
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &-nav__item{
+    position: relative;
+    @media screen and (max-width: $phone-size){
+     white-space: nowrap;
+    }
+    &:after{
+      position: absolute;
+      content: " ";
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-bottom-width: 5px;
+      border-top-width: 5px;
+      border-left: 5px solid #3a3a3a;
+      bottom: 4px;
+      left: 0;
+    }
+  }
+  &-nav__link{
+    font-family: $main-font;
+    margin-left: 15px;
+    color: $base-text-color;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  &-contacts{
+    position: relative;
+    &:not(:last-child){
+      margin-bottom: 30px;
+      @media screen and (max-width: $phone-size){
+        margin-bottom: 15px;
+      }
+    }
+
+    &__text{
+      padding-left: 25px;
+      a{
+        color: $base-text-color;
+      }
+    }
+    &__icon{
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: #3a3a3a;
+      &:first-child{
+        width: 12px;
+        height: 18px;
+
+      }
+      &:nth-child(2){
+        width: 16px;
+        height: 14px;
+      }
+      &:last-child{
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  &-bottom{
+    text-align: center;
+    margin-top: 70px;
+    @media screen and (max-width: $tablet-size){
+      margin-top: 35px;
+    }
+
+    &__text{
+
+
+    }
+  }
+}
+
+

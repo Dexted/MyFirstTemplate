@@ -1,0 +1,16 @@
+extends template/main
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page'
+
+block content
+	include pages/index/features/back-to-top
+	include pages/index/features/preloader
+	include pages/index/promo-banner
+	include pages/index/catalog-nav
+	include pages/index/catalog-prevs
+	include pages/index/catalog-men
+	include pages/index/catalog-women
+	include pages/index/special-offers
+	include pages/index/blog

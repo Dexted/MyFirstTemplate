@@ -1,0 +1,143 @@
+.header-main__search{
+  display: block;
+  margin: auto 40px auto 0 ;
+  border: 1px solid #e1e1e1;
+  width: 51% ;
+  max-width: 605px;
+  @media screen and (max-width: $phone-size){
+    display: none;
+  }
+}
+.search-form{
+  position: relative;
+  height: 54px;
+  display: flex;
+  @media screen and (max-width: $tablet-size){
+    font-size: 12px;
+    height: 45px;
+
+  }
+
+  &__input{
+    padding: 0 15px ;
+    max-width: 305px ;
+    width: 51.2%;
+    border: none;
+  }
+
+  &__select{
+    max-width: 220px ;
+    width: 36.36%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.search-form__select_active{
+      .dropdown-menu{
+        display: flex;
+      }
+    }
+
+
+
+    &:after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #033333 transparent transparent transparent;
+      right: 7%;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (max-width: $tablet-size){
+        right: 1%;
+        border-width: 3px 3px 0 3px;
+      }
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background: #8c8c8c;
+
+    }
+
+  }
+  &__submit {
+    position: relative;
+
+  }
+}
+.search-btn {
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  border: none;
+  font-size: 20px;
+  height: 58px;
+  width: 70px;
+  @media screen and (max-width: $phone-size){
+    position: static;
+    height: 45px;
+    width: 55px;
+    border-radius: 7px;
+    margin-right: 5px
+  }
+  @media screen and (max-width: $tablet-size){
+    height: 49px;
+    width: 55px;
+    left: 24px;
+  }
+}
+
+.search-mobile{
+  display: none;
+  @media screen and (max-width: $phone-size){
+    display: block;
+  }
+}
+
+.dropdown-menu {
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: $white;
+  border: 1px solid #e1e1e1;
+  &__header{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  & > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    @media screen and (max-width: $tablet-size){
+      height: 40px;
+    }
+    &:hover{
+      background: #e1e1e1;
+    }
+    &:not(:last-child){
+      border-bottom: 1px solid #e1e1e1;
+    }
+  }
+}

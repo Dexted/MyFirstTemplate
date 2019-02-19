@@ -1,0 +1,53 @@
+@import "section";
+@import "slider";
+@import "promo-banner";
+@import "search";
+@import "blog";
+@import "catalog-nav";
+@import "preloader";
+.logo {
+  &__img {
+    width: 210px;
+
+    @media screen and (max-width: $tablet-size){
+      width: 150px;
+    }
+
+    @media screen and (max-width: $phone-size){
+      width: 100px ;
+    }
+  }
+}
+
+
+.bg-to-right {
+  background-image: linear-gradient(to right, $white, $white  50%, #ebebeb 50%);
+}
+.bg-to-left {
+  background-image: linear-gradient(to left, $white, $white  50%, #ebebeb 50%);
+}
+
+
+.special-offer{
+  opacity: 0;
+  transition: all linear 1s;
+  height: 0; overflow-y: hidden;
+  &.active{
+    opacity: 1;
+    height: auto ;
+    overflow-y: visible;
+  }
+}
+
+
+.text{
+  line-height: 24px;
+  font-family: $main-font;
+}
+
+
+
+
+
+
+

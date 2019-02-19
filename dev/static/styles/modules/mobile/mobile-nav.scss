@@ -1,0 +1,55 @@
+.mobile-nav{
+  display: none;
+  @media screen and (max-width: $phone-size){
+    display: block;
+  }
+  &__sandwich{
+    padding: 10px;
+    cursor: pointer;
+  }
+  &__icon{
+    width: 40px;
+    height: 35px;
+    fill:  $base-text-color ;
+  }
+  &__content{
+    overflow: auto;
+    background-color: $black;
+    bottom: 0;
+    left: -100%;
+    position: fixed;
+    transition: all linear .5s;
+    top: 95px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    &.active{
+
+      left: 0;
+
+    }
+  }
+  &__list{
+
+  }
+  &__item{
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid transparent;
+    &:hover{
+      border-bottom: 3px solid $main-action-color;
+    }
+    &.active{
+      border-bottom: 3px solid $main-action-color;
+    }
+  }
+  &__link{
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: $medium-font;
+
+  }
+
+}

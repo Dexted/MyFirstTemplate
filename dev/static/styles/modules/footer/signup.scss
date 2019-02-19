@@ -1,0 +1,55 @@
+.signup{
+  align-items: center;
+  display: flex;
+  padding-bottom: 42px;
+  border-bottom: 1px solid rgba(68, 68, 68, .5);
+  margin-bottom: 40px;
+  @media screen and (max-width: $phone-size){
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 21px;
+  }
+  &__text{
+    text-transform: uppercase;
+    font-family: $bold-font;
+    font-size: 20px;
+    margin-right: 40px;
+    @media screen and (max-width: $phone-size){
+      white-space: nowrap;
+      margin-right: 0;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+  }
+  &__form{
+    position: relative;
+    @media screen and (max-width: $phone-size){
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__input-field{
+    background: #e8e8e8;
+    width: 453px;
+    height: 59px;
+    padding: 22px  140px  22px 30px;
+    @media screen and (max-width: $phone-size){
+      width: 100%;
+      padding: 5px  27% 5px 15px ;
+    }
+  }
+  &__submit{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 59px;
+    width: 111px;
+    @media screen and (max-width: $phone-size){
+      width: 25%;
+    }
+  }
+}

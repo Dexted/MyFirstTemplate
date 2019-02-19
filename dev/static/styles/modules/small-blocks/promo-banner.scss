@@ -1,0 +1,94 @@
+.js-promo-banner{
+  @media screen and (max-width: $phone-size){
+    margin: 0 30px;
+  }
+  @media screen and (max-width: $tablet-size){
+    margin: 0 45px;
+  }
+}
+
+
+.promo-banner{
+  &__item{
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 630px;
+    @media screen and (max-width: $tablet-size){
+      height: 450px;
+    }
+    @media screen and (max-width: $phone-size){
+      height: 330px;
+    }
+
+  }
+
+  &__heading{
+    font-family: $bold-font;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    & > * {
+      &:nth-child(1){
+        font-size: 25px;
+        @media screen and (max-width: $tablet-size){
+          font-size: 25px;
+        }
+        @media screen and (max-width: $phone-size){
+          font-size: 30px;
+        }
+
+      }
+      &:nth-child(2){
+        font-size: 86px;
+        @media screen and (max-width: $tablet-size){
+          font-size: 70px;
+        }
+        @media screen and (max-width: $phone-size){
+          font-size: 25px;
+        }
+
+      }
+      &:nth-child(3){
+        position: relative;
+        font-size: 34px;
+        font-style: italic;
+        text-transform: none;
+        &:before, &:after{
+          background: $white;
+          position: absolute;
+          top: 25%;
+          transform: translateY(-50%);
+          content: "";
+          width: 120px;
+          height: 2px;
+        }
+        &:before{
+          right: 0;
+        }
+        &:after{
+          left: 55px;
+        }
+        @media screen and (max-width: $phone-size){
+          font-size: 21px;
+          &:after{
+            display: none;
+          }
+          &:before{
+            display: none;
+          }
+        }
+
+      }
+      &:nth-child(4){
+        font-size: 43px;
+        @media screen and (max-width: $phone-size){
+          font-size: 28px;
+        }
+      }
+
+
+    }
+  }
+
+}

@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  margin: 0 auto 0 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  @media screen and (max-width: $tablet-size){
+    margin: 0 auto 0 15px;
+  }
+  a {
+    padding: 22px;
+    color: $white;
+    display: block;
+    @media screen and (max-width: $tablet-size){
+      padding: 10px;
+    }
+  }
+  & > * {
+    border-bottom: 7px solid transparent;
+    transition: all linear 0.2s;
+    @media screen and (max-width: $tablet-size){
+      border-bottom: 4px solid transparent;
+    }
+
+    &.active {
+      border-bottom: 7px solid $main-action-color;
+      @media screen and (max-width: $tablet-size){
+        border-bottom: 4px solid $main-action-color;
+      }
+    }
+    &:hover {
+      border-bottom: 7px solid $main-action-color;
+      @media screen and (max-width: $tablet-size){
+        border-bottom: 4px solid $main-action-color;
+      }
+    }
+  }
+}

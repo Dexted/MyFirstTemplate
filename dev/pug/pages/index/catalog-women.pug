@@ -1,0 +1,24 @@
+section.s-women
+  .bg-to-left
+    .container.container_bg-color_white
+      .category-title Women
+      .category__row
+        .category__col
+          .product-prevs.js-category-slider.js-category-slider_women
+            include product/women/product-prev-women-1
+            include product/women/product-prev-women-2
+            include product/women/product-prev-women-1
+            include product/women/product-prev-women-2
+            include product/women/product-prev-women-1
+            include product/women/product-prev-women-2
+            include product/women/product-prev-women-1
+            include product/women/product-prev-women-2
+          .js-category-slider__navigation
+            .slider-nav.js-category-slider__nav-prev.js-category-slider__nav-prev_women
+              +icon('chevron-left','slider-nav__icon')
+            .slider-nav.js-category-slider__nav-next.js-category-slider__nav-next_women
+              +icon('chevron-right','slider-nav__icon')
+        .category__col
+          a(href="#" style="background-image:url('static/images/content/women/category-prev-women.jpg')").category-prev.category-prev_size_lg
+            .category-prev__title for women
+            .btn.btn__size_lg.catalog-prev__btn More

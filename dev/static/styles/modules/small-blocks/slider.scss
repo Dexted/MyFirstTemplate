@@ -1,0 +1,132 @@
+
+
+
+.js-promo-banner__navigation{
+
+  .slider-nav__icon{
+    fill: $white ;
+    opacity: 0.65;
+    width: 65px;
+    height: 65px;
+    @media screen and (max-width: $phone-size){
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (max-width: $tablet-size){
+      width: 50px;
+      height: 50px;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .banner-slider__nav{
+
+    &-prev{
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -60px;
+      @media screen and (max-width: $phone-size){
+        left: 6px;
+      }
+      @media screen and (max-width: $tablet-size){
+        left: 15px;
+      }
+    }
+
+    &-next{
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -60px;
+      @media screen and (max-width: $phone-size){
+        right: 6px;
+      }
+      @media screen and (max-width: $tablet-size){
+        right: 15px;
+      }
+    }
+  }
+}
+
+.slick-dots{
+  position: absolute;
+  top: -10px;
+  transform: translateX(-50%);
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button{
+    @include size(10px);
+    background: #000000;
+    display: block;
+    text-indent: -9999px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+  }
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+      text-indent: 999px;
+      &.slick-active {
+        button {
+          background-color: $main-action-color;
+        }
+      }
+    }
+}
+
+.js-category-slider__navigation{
+  @media screen and (max-width: $phone-size){
+    display: none;
+  }
+  .js-category-slider__nav-prev{
+    position: absolute;
+    cursor: pointer;
+    top: -65px;
+    right: 36px;
+    transform: translateX(-100%);
+    @media screen and (max-width: $tablet-size){
+      right: 90px;
+    }
+
+  }
+  .js-category-slider__nav-next{
+    position: absolute;
+    cursor: pointer;
+    top: -65px;
+    right: 25px;
+
+  }
+
+  .js-category-slider__nav-prev_new,
+  .js-category-slider__nav-prev_best,
+  .js-category-slider__nav-prev_popular{
+    @media screen and (max-width: $tablet-size){
+      top: -100px;
+    }
+  }
+  .js-category-slider__nav-next_new,
+  .js-category-slider__nav-next_best,
+  .js-category-slider__nav-next_popular{
+    @media screen and (max-width: $tablet-size){
+      top: -100px;
+    }
+  }
+  .slider-nav__icon{
+    fill: $dark ;
+    opacity: 0.75;
+    width: 40px;
+    height: 40px;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+header.header
+  .header-top
+    .container.container_size_lg
+      .top-messages
+        .top-message
+          span.top-message__text <i class="fas fa-shopping-cart top-message__icon"></i> Free shipping ON all order
+        .top-message
+          span.top-message__text <i class="far fa-money-bill-alt top-message__icon top-message__icon"></i> 100% MONEY BACK GUARANTEE
+        .top-message
+          span.top-message__text <i class="far fa-clock top-message__icon top-message__icon"></i>  ONLINE SUPPORT 24/7
+  .header-main
+    .container
+      .logo.header-main__logo
+        .logo__wrapper
+          img(src="static/images/general/logo.png", alt="logo").logo__img
+      include search
+      include search-mobile
+      include basket-prev-mobile
+      include mobile/mobile-nav
+      ul.socials
+        li.socials__item
+          a(href="#").socials__link <i class="fab fa-facebook-f"></i>
+        li.socials__item
+          a(href="#").socials__link <i class="fab fa-twitter"></i>
+        li.socials__item
+          a(href="#").socials__link <i class="fab fa-instagram"></i>
+        li.socials__item
+          a(href="#").socials__link <i class="fab fa-youtube"></i>
+  .header-bottom
+    .container
+      include navigation
+      a(href="#").btn.basket-prev
+        i.fas.fa-shopping-cart.basket-prev__icon
+        span.basket-prev__text Shopping Cart (0)
+
+
+
